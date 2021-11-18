@@ -1,3 +1,4 @@
+#ляля
 # Берем заготовку для квадрат-объектив и учимся рисовать разные фигуры по нажатию на кнопку "показать"
 from PyQt5.QtCore import QPoint
 from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit, QLabel
