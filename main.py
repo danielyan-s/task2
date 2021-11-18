@@ -1,5 +1,6 @@
 #ляля
 # Берем заготовку для квадрат-объектив и учимся рисовать разные фигуры по нажатию на кнопку "показать"
+from UI import Ui_Form
 from PyQt5.QtCore import QPoint
 from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit, QLabel
 from PyQt5.QtWidgets import QPushButton
@@ -9,21 +10,14 @@ import random
 
 SCREEN_SIZE = [400, 450]
 FIGURES = ['circle']
-COLORS = ['yellow']
+COLORS = ['red', 'green', 'blue', 'orange', 'pink']
 
 
-class Example(QWidget):
+class Example(QWidget, Ui_Form):
     def __init__(self):
         super().__init__()
-        self.initUI()
-
-    def initUI(self):
-        self.setGeometry(400, 400, *SCREEN_SIZE)
-        self.setWindowTitle('Супрематизм')
-        self.btn = QPushButton(self)
-        self.btn.setText('Показать')
-        self.btn.move(10, 10)
-        self.btn.clicked.connect(self.draw)
+        self.setupUi(self)
+        self.pushButton.clicked.connect(self.draw)
         self.flag = False
         self.coords = []
 
